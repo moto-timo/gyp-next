@@ -1,5 +1,55 @@
 # Changelog
 
+## [0.23.0](https://github.com/moto-timo/gyp-next/compare/v0.22.1...v0.23.0) (2026-05-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* resolve issue with relative paths during linking ([#284](https://github.com/moto-timo/gyp-next/issues/284))
+
+### Features
+
+* add support for Visual Studio 2026 ([#319](https://github.com/moto-timo/gyp-next/issues/319)) ([cb13bbc](https://github.com/moto-timo/gyp-next/commit/cb13bbc4ab7a7d86b51221b39ebee4281e1d3e19))
+* generate compile_commands.json with ninja ([#228](https://github.com/moto-timo/gyp-next/issues/228)) ([7b20b46](https://github.com/moto-timo/gyp-next/commit/7b20b4673d8cf46ff61898eb19569007d55c854a))
+* provide escaped version of `PRODUCT_DIR_ABS` ([#271](https://github.com/moto-timo/gyp-next/issues/271)) ([3bf3b1c](https://github.com/moto-timo/gyp-next/commit/3bf3b1cda26f16c645e0fdd5582ffbf49d9a2580))
+* support language standard keys in msvs_settings ([#252](https://github.com/moto-timo/gyp-next/issues/252)) ([322f6d5](https://github.com/moto-timo/gyp-next/commit/322f6d5d5233967522f3e55c623a8e7d7281e024))
+* Windows ARM64 target architecture support ([#331](https://github.com/moto-timo/gyp-next/issues/331)) ([652a346](https://github.com/moto-timo/gyp-next/commit/652a346bbd3b077a4b08a3c37d48100ce200758a))
+
+
+### Bug Fixes
+
+* add dict.items() in dictionary iteration ([#341](https://github.com/moto-timo/gyp-next/issues/341)) ([f7085ce](https://github.com/moto-timo/gyp-next/commit/f7085ce0162af6ea8afbbce677318c434120b958))
+* **build:** Use SPDX license expression ([#310](https://github.com/moto-timo/gyp-next/issues/310)) ([ce0da4a](https://github.com/moto-timo/gyp-next/commit/ce0da4a6dc1068b73e55e6a58a236bf69f2fed4d))
+* **ci:** add Python 3.13 pre-release to test matrix ([#257](https://github.com/moto-timo/gyp-next/issues/257)) ([8597203](https://github.com/moto-timo/gyp-next/commit/8597203b687325c7516367135e026586279d0583))
+* **cli:** remove duplicate usage ([#308](https://github.com/moto-timo/gyp-next/issues/308)) ([0996f60](https://github.com/moto-timo/gyp-next/commit/0996f60e9bc83ec9d7b31e39bebd23f8dc990130))
+* compilation failure on the OpenHarmony platform ([#301](https://github.com/moto-timo/gyp-next/issues/301)) ([0cf7a14](https://github.com/moto-timo/gyp-next/commit/0cf7a142be06f686b8b42849791de902f177cf9f))
+* do not assume that /usr/bin/env exists on macOS ([#216](https://github.com/moto-timo/gyp-next/issues/216)) ([706d04a](https://github.com/moto-timo/gyp-next/commit/706d04aba5bd18f311dc56f84720e99f64c73466))
+* **docs:** Add running gyp via uv ([#306](https://github.com/moto-timo/gyp-next/issues/306)) ([0e43f61](https://github.com/moto-timo/gyp-next/commit/0e43f61da8154f9b460ccba9ce4c0a25d2383ac4))
+* drop deprecated Python module pkg_resources ([#333](https://github.com/moto-timo/gyp-next/issues/333)) ([5b180d5](https://github.com/moto-timo/gyp-next/commit/5b180d52d03aff062bdea1ad0209b82271c7eb4a))
+* enable pch for clang on windows ([#268](https://github.com/moto-timo/gyp-next/issues/268)) ([cc5838c](https://github.com/moto-timo/gyp-next/commit/cc5838c4e9260bf459d71de53fbb2eebd1a6f508))
+* Ensure Consistent Order of build_files in WriteAutoRegenerationRule ([#293](https://github.com/moto-timo/gyp-next/issues/293)) ([59b5903](https://github.com/moto-timo/gyp-next/commit/59b59035f4ae63419343ffdafe0f0ff511ada17d))
+* failed to detect flavor if compiler path include white spaces ([#240](https://github.com/moto-timo/gyp-next/issues/240)) ([f3b9753](https://github.com/moto-timo/gyp-next/commit/f3b9753e7526377020e7d40e66b624db771cf84a))
+* fix E721 lint errors ([#206](https://github.com/moto-timo/gyp-next/issues/206)) ([d1299a4](https://github.com/moto-timo/gyp-next/commit/d1299a49d313eccabecf97ccb56fc033afad39ad))
+* Fix ruff v0.13.0 adds ruff rule RUF059 ([bd4491a](https://github.com/moto-timo/gyp-next/commit/bd4491a3ba641eeb040b785bbce367f72c3baf19))
+* fixup for break in EscapeForCString ([#274](https://github.com/moto-timo/gyp-next/issues/274)) ([610f661](https://github.com/moto-timo/gyp-next/commit/610f661da877a358c8b3cbc106b528fb1d0b8095))
+* handle `None` case in xcode_emulation regexes ([#311](https://github.com/moto-timo/gyp-next/issues/311)) ([b21ee31](https://github.com/moto-timo/gyp-next/commit/b21ee3150eea9fc1a8811e910e5ba64f42e1fb77))
+* ignore failure of `GetCompilerPredefines` ([#295](https://github.com/moto-timo/gyp-next/issues/295)) ([0eaea29](https://github.com/moto-timo/gyp-next/commit/0eaea297f0fbb0869597aa162f66f78eb2468fad))
+* make xcode_emulation handle `xcodebuild` not in the `PATH` ([#303](https://github.com/moto-timo/gyp-next/issues/303)) ([8224dee](https://github.com/moto-timo/gyp-next/commit/8224deef984add7e7afe846cfb82c9d3fa6da1fb))
+* python lint  more ruff rules ([#291](https://github.com/moto-timo/gyp-next/issues/291)) ([fabc78c](https://github.com/moto-timo/gyp-next/commit/fabc78caffcf988365d970ced5a151f40525077e))
+* Python lint import-outside-top-level ruff rule PLC0415 ([#298](https://github.com/moto-timo/gyp-next/issues/298)) ([34f4df6](https://github.com/moto-timo/gyp-next/commit/34f4df614936ee6a056e47406ebbe7e3c1cb6540))
+* remove explicit installation of setuptools ([#278](https://github.com/moto-timo/gyp-next/issues/278)) ([e476778](https://github.com/moto-timo/gyp-next/commit/e4767782c70ca8427184694589d9f0ded5eeed22))
+* replace weak hash functions with SHA-256 ([#329](https://github.com/moto-timo/gyp-next/issues/329)) ([958029e](https://github.com/moto-timo/gyp-next/commit/958029e6e4969a871d15e78cd083bb102bebb381))
+* resolve issue with relative paths during linking ([#284](https://github.com/moto-timo/gyp-next/issues/284)) ([a2d7439](https://github.com/moto-timo/gyp-next/commit/a2d7439fbd3c03f01e1149fdbe682f754bc6cc7f))
+* support cross compiling for wasm with make generator ([#222](https://github.com/moto-timo/gyp-next/issues/222)) ([de0e1c9](https://github.com/moto-timo/gyp-next/commit/de0e1c9a5791d1bf4bc3103f878ab74814864ab4))
+* support empty dictionary keys in input ([#245](https://github.com/moto-timo/gyp-next/issues/245)) ([178459f](https://github.com/moto-timo/gyp-next/commit/178459ff343a2771d5f30f04467d2f032d6b3565))
+* update Ruff to 0.3.1 ([876ccaf](https://github.com/moto-timo/gyp-next/commit/876ccaf5629e1b95e13aaa2b0eb6cbd08fa80593))
+* use floor division when escaping command-line arguments ([#338](https://github.com/moto-timo/gyp-next/issues/338)) ([cadca24](https://github.com/moto-timo/gyp-next/commit/cadca2416dc13e117e035ad6dd2b471a86d0430f))
+
+
+### Documentation
+
+* vendor docs from gyp.gsrc.io ([#254](https://github.com/moto-timo/gyp-next/issues/254)) ([8d7ba6e](https://github.com/moto-timo/gyp-next/commit/8d7ba6e784dedf1122a0456150c739d2a09ecf57))
+
 ## [0.22.1](https://github.com/nodejs/gyp-next/compare/v0.22.0...v0.22.1) (2026-04-21)
 
 
